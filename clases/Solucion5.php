@@ -28,11 +28,12 @@
         public function verificarMayorMenor(){
             if($this->valo1 > $this->valor2){
                 echo "<br> $this->valor1 es mayor que $this->valor2";
-                Jelseif ($this->valo2 > $this->valor1) {
-                qcho "<br> $this->valor2 es mayor que $this->valor1";
-            }else {
-                echo "<br> Los numeros son iguales";
+                elseif ($this->valo2 > $this->valor1) {
+                    echo "<br> $this->valor2 es mayor que $this->valor1";
+                }else {
+                    echo "<br> Los numeros son iguales";
+                }
             }
-            }
+        }
     }
 ?>

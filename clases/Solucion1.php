@@ -1,39 +1,59 @@
 <?php
-    class Solucion5{
-        private $valor1;
-        private $valor2;
 
-        public function setValor1 ($valor1){
-            $this->valor1 = $valor1; 
-        }
-        public function setValor2 ($valor2){
-            $this->valor2 = $valor2; 
-        }
-        public function generarNumeros(){
-            $mayor=0;
-            /* esta condicion cambia los valores para que el ciclo funcione
-            sin importar cual valor es mayor*/
-            if($this->valor1 > $this->valor2){
-                $mayor=$this->valor1;
-                $this->valor1=$this->valor2;
-                $this->valor2=$mayor;
-            }
-            echo "<br>Los números pares son:";
-            for ($i= $this->valor1; $i <= $this->valor2; $i++) { 
-                if ($i % 2 == 0) {
-                    echo "<br>$i";
-                }
-            }
-        }
-        public function verificarMayorMenor(){
-            if($this->valo1 > $this->valor2){
-                echo "<br> $this->valor1 es mayor que $this->valor2";
-                Jelseif ($this->valo2 > $this->valor1) {
-                qcho "<br> $this->valor2 es mayor que $this->valor1";
-            }else {
-                echo "<br> Los numeros son iguales";
-            }
-            }
+class Solucion1{
+
+    private $nombre;
+    private $curso;
+    private $nota1;
+    private $nota2;
+    private $nota3;
+    private $nota4;
+    private $nota5;
+
+    public function setNombre($nombre){
+        $this->nombre = $nombre;
     }
+
+    public function setCurso($curso){
+        $this->curso = $curso;
     }
+
+    public function setNota1($nota1){
+        $this->nota1 = $nota1;
+    }
+
+    public function setNota2($nota2){
+        $this->nota2 = $nota2;
+    }
+
+    public function setNota3($nota3){
+        $this->nota3 = $nota3;
+    }
+
+    public function setNota4($nota4){
+        $this->nota4 = $nota4;
+    }
+
+    public function setNota5($nota5){
+        $this->nota5 = $nota5;
+    }
+
+    public function calcularPromedio(){
+
+        $promedio = (
+            $this->nota1 +
+            $this->nota2 +
+            $this->nota3 +
+            $this->nota4 +
+            $this->nota5
+        ) / 5;
+
+        echo "<h2>Resultado</h2>";
+        echo "Nombre: ".$this->nombre."<br>";
+        echo "Curso: ".$this->curso."<br>";
+        echo "Promedio: ".$promedio;
+    }
+
+}
+
 ?>

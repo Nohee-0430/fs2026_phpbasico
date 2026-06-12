@@ -1,25 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Problema 1</title>
 </head>
 <body>
-    <header>
-        <h1>Problema No. 5</h1>
-    </header>
-    <main>
-        <p>
 
-        </p>
-        <form action="objetos/objetoSolucion5.php" method="post">
-            <label for="num_valor1">Primer valor</label>
-            <input type="number" name="num_valor1" id="num_valor1">
-            <label for="num_valor2">Segundo valor</label>
-            <input type="number" name="num_valor2" id="num_valor2">
-            <button type="submit">Generar números</button>
-        </form>
-    </main>
+    <h1>Problema No. 1</h1>
+
+    <form action="objetos/objetoSolucion1.php" method="post">
+
+        <label>Nombre:</label>
+        <input type="text" name="txt_nombre" required>
+        <br><br>
+
+        <label>Curso:</label>
+        <input type="text" name="txt_curso" required>
+        <br><br>
+
+        <label>Nota 1:</label>
+        <input type="number" name="nota1" required>
+        <br><br>
+
+        <label>Nota 2:</label>
+        <input type="number" name="nota2" required>
+        <br><br>
+
+        <label>Nota 3:</label>
+        <input type="number" name="nota3" required>
+        <br><br>
+
+        <label>Nota 4:</label>
+        <input type="number" name="nota4" required>
+        <br><br>
+
+        <label>Nota 5:</label>
+        <input type="number" name="nota5" required>
+        <br><br>
+
+        <button type="submit">Calcular Promedio</button>
+
+    </form>
+
 </body>
 </html>

@@ -1,38 +1,45 @@
 <?php
-    class Solucion5{
-        private $valor1;
-        private $valor2;
 
-        public function setValor1 ($valor1){
-            $this->valor1 = $valor1; 
-        }
-        public function setValor2 ($valor2){
-            $this->valor2 = $valor2; 
-        }
-        public function generarNumeros(){
-            $mayor=0;
-            /* esta condicion cambia los valores para que el ciclo funcione
-            sin importar cual valor es mayor*/
-            if($this->valor1 > $this->valor2){
-                $mayor=$this->valor1;
-                $this->valor1=$this->valor2;
-                $this->valor2=$mayor;
-            }
-            echo "<br>Los números pares son:";
-            for ($i= $this->valor1; $i <= $this->valor2; $i++) { 
-                if ($i % 2 == 0) {
-                    echo "<br>$i";
-                }
-            }
-        }
-        public function verificarMayorMenor(){
-            if($this->valo1 > $this->valor2){
-                echo "<br> $this->valor1 es mayor que $this->valor2";
-                Jelseif ($this->valo2 > $this->valor1) {
-                qcho "<br> $this->valor2 es mayor que $this->valor1";
-            }else {
-                echo "<br> Los numeros son iguales";
-            }
-            }
+class Solucion6{
+
+    private $palabra;
+
+    public function setPalabra($palabra){
+        $this->palabra = $palabra;
     }
+
+    public function primerCaracter(){
+
+        echo "<table border='1'>";
+        echo "<tr><td>".substr($this->palabra,0,1)."</td></tr>";
+        echo "</table>";
+
+    }
+
+    public function ultimoCaracter(){
+
+        echo "<table border='1'>";
+        echo "<tr><td>".substr($this->palabra,-1)."</td></tr>";
+        echo "</table>";
+
+    }
+
+    public function mostrarCaracteres(){
+
+        echo "<table border='1'>";
+
+        for($i = 0; $i < strlen($this->palabra); $i++){
+
+            echo "<tr>";
+            echo "<td>".substr($this->palabra,$i,1)."</td>";
+            echo "</tr>";
+
+        }
+
+        echo "</table>";
+
+    }
+
+}
+
 ?>

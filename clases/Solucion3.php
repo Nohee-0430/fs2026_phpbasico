@@ -1,38 +1,39 @@
 <?php
-    class Solucion5{
-        private $valor1;
-        private $valor2;
 
-        public function setValor1 ($valor1){
-            $this->valor1 = $valor1; 
-        }
-        public function setValor2 ($valor2){
-            $this->valor2 = $valor2; 
-        }
-        public function generarNumeros(){
-            $mayor=0;
-            /* esta condicion cambia los valores para que el ciclo funcione
-            sin importar cual valor es mayor*/
-            if($this->valor1 > $this->valor2){
-                $mayor=$this->valor1;
-                $this->valor1=$this->valor2;
-                $this->valor2=$mayor;
-            }
-            echo "<br>Los números pares son:";
-            for ($i= $this->valor1; $i <= $this->valor2; $i++) { 
-                if ($i % 2 == 0) {
-                    echo "<br>$i";
-                }
-            }
-        }
-        public function verificarMayorMenor(){
-            if($this->valo1 > $this->valor2){
-                echo "<br> $this->valor1 es mayor que $this->valor2";
-                Jelseif ($this->valo2 > $this->valor1) {
-                qcho "<br> $this->valor2 es mayor que $this->valor1";
-            }else {
-                echo "<br> Los numeros son iguales";
-            }
-            }
+class Solucion3{
+
+    private $numero1;
+    private $numero2;
+    private $numero3;
+
+    public function setNumero1($numero1){
+        $this->numero1 = $numero1;
     }
+
+    public function setNumero2($numero2){
+        $this->numero2 = $numero2;
+    }
+
+    public function setNumero3($numero3){
+        $this->numero3 = $numero3;
+    }
+
+    public function ordenarNumeros(){
+
+        $numeros = [
+            $this->numero1,
+            $this->numero2,
+            $this->numero3
+        ];
+
+        sort($numeros);
+
+        echo "<h2>Resultado</h2>";
+        echo "Menor: ".$numeros[0]."<br>";
+        echo "Medio: ".$numeros[1]."<br>";
+        echo "Mayor: ".$numeros[2];
+    }
+
+}
+
 ?>
