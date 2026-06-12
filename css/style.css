@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #893941;      /* Borgoña elegante */
+    --secondary-color: #CB7885;    /* Rosa suave */
+    --accent-color: #D4D994;       /* Verde oliva pastel */
+    --dark-olive: #5E6623;         /* Verde oliva oscuro */
+    --bg-light: #FAF8F2;           /* Crema de fondo */
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-light);
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: 
+        radial-gradient(at 10% 20%, rgba(212, 217, 148, 0.2) 0px, transparent 50%),
+        radial-gradient(at 90% 10%, rgba(203, 120, 133, 0.15) 0px, transparent 50%),
+        radial-gradient(at 50% 90%, rgba(137, 57, 65, 0.05) 0px, transparent 50%);
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Navbar & Header */
+.custom-header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 20px rgba(137, 57, 65, 0.15);
+    margin-bottom: 2.5rem;
+}
+
+.custom-header h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.custom-header p {
+    margin: 0.5rem 0 0 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 300;
+}
+
+/* Cards Premium */
+.custom-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(137, 57, 65, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(137, 57, 65, 0.08);
+    border-color: var(--secondary-color);
+}
+
+.card-header-accent {
+    background-color: var(--accent-color);
+    padding: 1.25rem;
+    border-bottom: 1px solid rgba(94, 102, 35, 0.1);
+}
+
+.card-header-accent h5 {
+    color: var(--dark-olive);
+    margin: 0;
+    font-weight: 600;
+}
+
+.card-header-primary {
+    background-color: var(--primary-color);
+    padding: 1.25rem;
+    border-bottom: none;
+}
+
+.card-header-primary h5 {
+    color: #ffffff;
+    margin: 0;
+    font-weight: 600;
+}
+
+.custom-card-body {
+    padding: 2rem;
+}
+
+/* Inputs Formulario */
+.form-label {
+    font-weight: 500;
+    color: var(--dark-olive);
+    margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+    border: 2px solid rgba(137, 57, 65, 0.12);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    transition: all var(--transition-speed) ease;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(203, 120, 133, 0.25);
+    background-color: #ffffff;
+}
+
+/* Botones Personalizados */
+.btn-custom-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 12px rgba(137, 57, 65, 0.2);
+}
+
+.btn-custom-primary:hover, .btn-custom-primary:focus {
+    background-color: #702e34;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(137, 57, 65, 0.3);
+}
+
+.btn-custom-secondary {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 12px rgba(203, 120, 133, 0.2);
+}
+
+.btn-custom-secondary:hover, .btn-custom-secondary:focus {
+    background-color: #b36471;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(203, 120, 133, 0.3);
+}
+
+.btn-custom-outline {
+    background-color: transparent;
+    color: var(--dark-olive);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-custom-outline:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-olive);
+}
+
+/* Badges */
+.badge-custom-poo {
+    background-color: var(--accent-color);
+    color: var(--dark-olive);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px;
+}
+
+.badge-custom-estructurado {
+    background-color: rgba(203, 120, 133, 0.15);
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px;
+}
+
+/* Resultados y tablas */
+.result-box {
+    background-color: #ffffff;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.result-box h4 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.result-box table {
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.result-box table th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.75rem;
+    font-weight: 600;
+}
+
+.result-box table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.result-box table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Tablas generales */
+table {
+    border: 1px solid rgba(137, 57, 65, 0.1) !important;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+
+table td, table th {
+    padding: 0.8rem 1.2rem !important;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(212, 217, 148, 0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 1.5rem 0;
+    background-color: #eae6db;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    color: var(--dark-olive);
+    font-size: 0.9rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
